@@ -2,23 +2,7 @@
 
 A modern, terminal-inspired portfolio website built with Next.js 15, featuring interactive elements and smooth animations.
 
-## 🎨 Inspiration & Credits
-
-This portfolio was inspired by and built upon the excellent work of **Rakesh Yadav** ([@Rakeshyadav-19](https://github.com/Rakeshyadav-19)). His original portfolio design provided the foundation for this project.
-
-### What We Modified & Added:
-
-- ✨ **Boot Sequence Animation** - Added Linux-style boot animation with smooth transitions
-- 💻 **Interactive Terminal** - Built a fully functional terminal with 14+ custom commands
-- 🎯 **Enhanced Responsiveness** - Improved mobile experience and touch interactions
-- 🎨 **Custom Scrollbars** - Added themed scrollbars for better UX
-- 📱 **Fullscreen Terminal Mode** - Added maximize/minimize functionality
-- 🚀 **Performance Optimizations** - Improved loading times and animations
-- 📝 **Content Customization** - Updated with personal information, projects, and achievements
-- 🎭 **Smooth Animations** - Enhanced Framer Motion animations throughout
-- 🔧 **Code Cleanup** - Removed debug logs and optimized component structure
-
-Special thanks to Rakesh for creating such an inspiring portfolio template and for giving permission to use and modify the code!
+> Inspired by [Rakesh Yadav's portfolio](https://github.com/Rakeshyadav-19)
 
 ## 🚀 Features
 
@@ -69,12 +53,6 @@ npm start
    - Add your resume PDF as `public/Pranav-Nigade-Resume.pdf`
    - Or update the path in `components/footer.tsx` and `components/interactive-terminal.tsx`
 
-## 🌐 Deployment
-
-This project is optimized for deployment on Vercel:
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/pranavnigade123/portfolio)
-
 ## 📝 Terminal Commands
 
 Open the terminal (click the floating terminal icon) and try these commands:
@@ -96,7 +74,6 @@ This project is open source and available under the MIT License.
 
 ## � Acknowledgments
 
-- **Original Design:** [Rakesh Yadav](https://github.com/Rakeshyadav-19) - Thank you for the amazing portfolio template and inspiration!
 - **Modifications & Enhancements:** Pranav Nigade - Added interactive terminal, boot sequence, and various UX improvements
 
 ## �👤 Author
@@ -108,4 +85,3 @@ This project is open source and available under the MIT License.
 
 ---
 
-Built with ❤️ using Next.js and TypeScript
