@@ -6,7 +6,7 @@ import { Terminal, X, Minimize2, Maximize2 } from "lucide-react";
 
 interface Command {
   input: string;
-  output: string | JSX.Element;
+  output: string | React.ReactElement;
 }
 
 export const InteractiveTerminal = () => {
@@ -20,7 +20,7 @@ export const InteractiveTerminal = () => {
   const inputRef = useRef<HTMLInputElement>(null);
   const terminalRef = useRef<HTMLDivElement>(null);
 
-  const commands: Record<string, () => string | JSX.Element> = {
+  const commands: Record<string, () => string | React.ReactElement> = {
     help: () => (
       <div className="space-y-1">
         <div className="text-green-400 font-semibold">Available commands:</div>
@@ -166,7 +166,7 @@ export const InteractiveTerminal = () => {
       return;
     }
 
-    let output: string | JSX.Element;
+    let output: string | React.ReactElement;
 
     if (commands[trimmedCmd]) {
       output = commands[trimmedCmd]();
