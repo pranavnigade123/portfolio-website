@@ -104,7 +104,7 @@ export const ContactSection = () => {
                             {/* Form */}
                             <form ref={formRef} onSubmit={handleSubmit} className="p-6 space-y-4">
                                 <div className="font-mono text-xs text-green-300 mb-4">
-                                    <span className="text-green-400">$</span> ./send_message --to rakesh
+                                    <span className="text-green-400">$</span> ./send_message --to pranav
                                 </div>
 
                                 {/* Name Input */}
