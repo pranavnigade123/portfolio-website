@@ -271,8 +271,8 @@ export const InteractiveTerminal = () => {
               display: isMinimized ? "none" : "flex"
             }}
           >
-            <div className="flex h-full w-full flex-col overflow-hidden rounded-lg sm:rounded-xl border border-green-500/30 bg-slate-900/98 shadow-2xl shadow-green-500/20 backdrop-blur-xl">
-              <div className="flex items-center justify-between border-b border-green-500/30 bg-slate-900/90 px-3 py-2 sm:px-4 sm:py-3 shrink-0">
+            <div className="flex h-full w-full flex-col overflow-hidden rounded-lg sm:rounded-xl border border-green-500/30 bg-gray-900/98 shadow-2xl shadow-green-500/20 backdrop-blur-xl">
+              <div className="flex items-center justify-between border-b border-green-500/30 bg-gray-900/90 px-3 py-2 sm:px-4 sm:py-3 shrink-0">
                 <div className="flex items-center gap-2 min-w-0">
                   <div className="flex gap-1.5 shrink-0">
                     <button
@@ -315,7 +315,7 @@ export const InteractiveTerminal = () => {
 
               <div
                 ref={terminalRef}
-                className="flex-1 overflow-y-auto overflow-x-hidden p-3 sm:p-4 font-mono text-xs sm:text-sm scrollbar-thin scrollbar-thumb-green-500/50 scrollbar-track-slate-800/50 hover:scrollbar-thumb-green-500/70"
+                className="flex-1 overflow-y-auto overflow-x-hidden p-3 sm:p-4 font-mono text-xs sm:text-sm scrollbar-thin scrollbar-thumb-green-500/50 scrollbar-track-gray-800/50 hover:scrollbar-thumb-green-500/70"
                 onClick={() => inputRef.current?.focus()}
                 style={{
                   scrollbarWidth: 'thin',
