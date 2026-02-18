@@ -23,19 +23,19 @@ import Link from "next/link";
 const projects = [
     {
         id: 1,
-        title: "Clearon",
-        description: "Production-grade RAG Knowledge Management Platform enabling semantic search and intelligent document processing across PDF, CSV, and web data sources. Integrated Azure OpenAI with PostgreSQL vector storage.",
-        command: "$ npm run dev",
-        tech: ["Next.js", "FastAPI", "Azure OpenAI", "PostgreSQL", "pgvector", "Docker"],
+        title: "DrawV",
+        description: "Full-stack SSR Tournament Management Platform with RESTful APIs, dynamic tournament creation, automated team/solo registrations, and public utilities like map-veto and coin-toss simulators.",
+        command: "$ npm run build",
+        tech: ["Next.js 15", "Node.js", "MongoDB Atlas", "NextAuth.js", "TypeScript", "Tailwind CSS"],
         category: "Full-Stack",
-        icon: Zap,
-        gradient: "from-blue-500 via-green-500 to-teal-500",
-        github: "https://github.com/pranavnigade123/clearon",
-        demo: "https://github.com/pranavnigade123/clearon",
+        icon: Server,
+        gradient: "from-green-500 via-emerald-500 to-teal-500",
+        github: "https://github.com/pranavnigade123/drawv",
+        demo: "https://www.drawfive.in",
         status: "Production",
-        year: "2024-2026",
-        metrics: { performance: "97%↑", memory: "75%↓", startup: "85%↓" },
-        highlights: ["RAG Platform", "Vector Search", "Azure OpenAI Integration"],
+        year: "2025",
+        metrics: { load: "<1.5s", uptime: "99.5%", players: "160+" },
+        highlights: ["SSR Platform", "Tournament Management", "Live Event Ready"],
     },
     {
         id: 2,
@@ -55,19 +55,19 @@ const projects = [
     },
     {
         id: 3,
-        title: "DrawV",
-        description: "Full-stack SSR Tournament Management Platform with RESTful APIs, dynamic tournament creation, automated team/solo registrations, and public utilities like map-veto and coin-toss simulators.",
-        command: "$ npm run build",
-        tech: ["Next.js 15", "Node.js", "MongoDB Atlas", "NextAuth.js", "TypeScript", "Tailwind CSS"],
+        title: "Clearon",
+        description: "Production-grade RAG Knowledge Management Platform enabling semantic search and intelligent document processing across PDF, CSV, and web data sources. Integrated Azure OpenAI with PostgreSQL vector storage.",
+        command: "$ npm run dev",
+        tech: ["Next.js", "FastAPI", "Azure OpenAI", "PostgreSQL", "pgvector", "Docker"],
         category: "Full-Stack",
-        icon: Server,
-        gradient: "from-green-500 via-emerald-500 to-teal-500",
-        github: "https://github.com/pranavnigade123/drawv",
-        demo: "https://www.drawfive.in",
+        icon: Zap,
+        gradient: "from-blue-500 via-green-500 to-teal-500",
+        github: "https://github.com/pranavnigade123/clearon",
+        demo: "https://github.com/pranavnigade123/clearon",
         status: "Production",
-        year: "2025",
-        metrics: { load: "<1.5s", uptime: "99.5%", players: "160+" },
-        highlights: ["SSR Platform", "Tournament Management", "Live Event Ready"],
+        year: "2024-2026",
+        metrics: { performance: "97%↑", memory: "75%↓", startup: "85%↓" },
+        highlights: ["RAG Platform", "Vector Search", "Azure OpenAI Integration"],
     },
 ];
 
@@ -149,10 +149,7 @@ function ProjectCard({ project, index }: { project: typeof projects[0]; index: n
             }}
             className="group relative h-full"
         >
-            {/* Holographic glow effect */}
-            <div
-                className={`absolute -inset-0.5 rounded-2xl bg-gradient-to-r ${project.gradient} opacity-0 blur-xl transition-opacity duration-500 group-hover:opacity-70`}
-            />
+
 
             {/* Main card */}
             <div className="relative flex h-full flex-col overflow-hidden rounded-2xl border border-green-500/30 bg-gradient-to-br from-[#1a1a1a] to-[#0f0f0f] shadow-2xl">
