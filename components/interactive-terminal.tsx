@@ -365,10 +365,23 @@ export const InteractiveTerminal = () => {
                     value={input}
                     onChange={(e) => setInput(e.target.value)}
                     onKeyDown={handleKeyDown}
-                    className="flex-1 bg-transparent text-white outline-none min-w-0"
+                    className="flex-1 bg-transparent text-white outline-none min-w-0 text-base"
                     autoComplete="off"
                     spellCheck={false}
+                    style={{ fontSize: '16px' }}
                   />
+                  {/* Mobile Enter Button */}
+                  <button
+                    onClick={() => {
+                      if (input.trim()) {
+                        handleCommand(input);
+                        setInput("");
+                      }
+                    }}
+                    className="sm:hidden shrink-0 rounded bg-green-500/20 px-3 py-1 text-xs text-green-400 border border-green-500/30 active:bg-green-500/30"
+                  >
+                    Enter
+                  </button>
                 </div>
               </div>
             </div>
