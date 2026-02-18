@@ -87,9 +87,9 @@ export const ContactSection = () => {
                         animate={isInView ? { opacity: 1, x: 0 } : {}}
                         transition={{ duration: 0.8 }}
                     >
-                        <div className="rounded-xl border border-green-500/30 bg-slate-900/80 shadow-2xl shadow-green-500/10">
+                        <div className="rounded-xl border border-green-500/30 bg-[#1a1a1a] shadow-2xl shadow-green-500/10">
                             {/* Terminal Header */}
-                            <div className="flex items-center justify-between border-b border-green-500/30 bg-slate-900/50 px-4 py-3">
+                            <div className="flex items-center justify-between border-b border-green-500/30 bg-[#1a1a1a] px-4 py-3">
                                 <div className="flex items-center gap-2">
                                     <div className="flex gap-1.5">
                                         <div className="h-3 w-3 rounded-full bg-red-500/80" />
@@ -216,6 +216,9 @@ export const ContactSection = () => {
         </section>
     );
 };
+
+
+
 
 
 

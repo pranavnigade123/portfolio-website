@@ -155,9 +155,9 @@ function ProjectCard({ project, index }: { project: typeof projects[0]; index: n
             />
 
             {/* Main card */}
-            <div className="relative flex h-full flex-col overflow-hidden rounded-2xl border border-green-500/30 bg-gradient-to-br from-slate-900 to-slate-950 shadow-2xl">
+            <div className="relative flex h-full flex-col overflow-hidden rounded-2xl border border-green-500/30 bg-gradient-to-br from-[#1a1a1a] to-[#0f0f0f] shadow-2xl">
                 {/* Terminal Header */}
-                <div className="flex flex-wrap items-center justify-between gap-2 border-b border-green-500/30 bg-slate-900/80 px-4 py-3">
+                <div className="flex flex-wrap items-center justify-between gap-2 border-b border-green-500/30 bg-[#1a1a1a] px-4 py-3">
                     <div className="flex items-center gap-2">
                         <div className="flex gap-1.5">
                             <div className="h-3 w-3 rounded-full bg-red-500/80" />
@@ -359,6 +359,9 @@ export const ProjectsSection = () => {
         </section>
     );
 };
+
+
+
 
 
 

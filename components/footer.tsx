@@ -53,9 +53,9 @@ export const Footer = () => {
             {/* Terminal-style footer */}
             <div className="mx-auto w-full max-w-7xl px-6 py-8 md:px-10 md:py-12">
                 {/* Top Section - Terminal Window */}
-                <div className="mb-8 rounded-xl border border-green-500/30 bg-slate-900/80 shadow-2xl shadow-green-500/10">
+                <div className="mb-8 rounded-xl border border-green-500/30 bg-[#1a1a1a] shadow-2xl shadow-green-500/10">
                     {/* Terminal Header */}
-                    <div className="flex items-center justify-between border-b border-green-500/30 bg-slate-900/50 px-4 py-3">
+                    <div className="flex items-center justify-between border-b border-green-500/30 bg-[#1a1a1a] px-4 py-3">
                         <div className="flex items-center gap-2">
                             <div className="flex gap-1.5">
                                 <div className="h-3 w-3 rounded-full bg-red-500/80" />
@@ -129,7 +129,7 @@ export const Footer = () => {
                                 href={social.href}
                                 target="_blank"
                                 aria-label={social.label}
-                                className="flex h-10 w-10 items-center justify-center rounded-lg border border-green-500/20 bg-slate-900/40 text-gray-400 transition-all hover:border-green-500/40 hover:bg-slate-900/60 hover:text-green-400"
+                                className="flex h-10 w-10 items-center justify-center rounded-lg border border-green-500/20 bg-[#1a1a1a]/60 text-gray-400 transition-all hover:border-green-500/40 hover:bg-[#1a1a1a] hover:text-green-400"
                             >
                                 <social.icon className="h-4 w-4" />
                             </Link>
@@ -161,6 +161,9 @@ export const Footer = () => {
         </footer>
     );
 };
+
+
+
 
 
 

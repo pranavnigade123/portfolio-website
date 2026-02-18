@@ -98,8 +98,8 @@ export const HeroSection = () => {
             className="order-2 lg:order-1 mt-4"
           >
             {/* Terminal Header */}
-            <div className="rounded-t-lg border border-green-500/30 bg-gradient-to-b from-slate-900 to-slate-950 shadow-2xl shadow-green-500/20">
-              <div className="flex items-center gap-2 border-b border-green-500/30 bg-slate-900/50 px-4 py-3">
+            <div className="rounded-t-lg border border-green-500/30 bg-gradient-to-b from-[#1a1a1a] to-[#0f0f0f] shadow-2xl shadow-green-500/20">
+              <div className="flex items-center gap-2 border-b border-green-500/30 bg-[#1a1a1a] px-4 py-3">
                 <div className="flex gap-1.5">
                   <div className="h-3 w-3 rounded-full bg-red-500/80" />
                   <div className="h-3 w-3 rounded-full bg-yellow-500/80" />
@@ -118,7 +118,7 @@ export const HeroSection = () => {
                     transition={{ delay: idx * 0.2 + 0.5, duration: 0.4 }}
                     className={cmd.startsWith("$") || cmd.startsWith(">") ? "" : "ml-2"}
                   >
-                    <span className={cmd.startsWith("$") ? "text-green-400" : cmd.startsWith(">") ? "text-green-300" : "text-gray-400"}>
+                    <span className={cmd.startsWith("$") ? "text-green-400" : cmd.startsWith(">") ? "text-gray-300" : "text-gray-400"}>
                       {cmd}
                     </span>
                     {idx === terminalCommands.length - 1 && (
@@ -143,7 +143,7 @@ export const HeroSection = () => {
               {techStack.map(({ icon: Icon, label, color }) => (
                 <div
                   key={label}
-                  className="group flex items-center gap-2 rounded-lg border border-green-500/20 bg-slate-900/60 px-3 py-2.5 backdrop-blur transition-all hover:border-green-500/40 hover:bg-slate-900/80"
+                  className="group flex items-center gap-2 rounded-lg border border-green-500/20 bg-[#1a1a1a]/80 px-3 py-2.5 backdrop-blur transition-all hover:border-green-500/40 hover:bg-[#1a1a1a]"
                 >
                   <Icon className={`h-4 w-4 ${color}`} />
                   <span className="text-xs font-medium text-gray-300">{label}</span>
@@ -228,6 +228,9 @@ export const HeroSection = () => {
     </section>
   );
 };
+
+
+
 
 
 

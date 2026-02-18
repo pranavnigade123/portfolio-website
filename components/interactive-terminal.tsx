@@ -26,28 +26,28 @@ export const InteractiveTerminal = () => {
   const commands: Record<string, () => string | React.ReactElement> = {
     help: () => (
       <div className="space-y-1">
-        <div className="text-green-400 font-semibold">Available commands:</div>
-        <div className="ml-2 space-y-0.5 text-gray-300 text-xs sm:text-sm">
-          <div><span className="text-cyan-300">help</span> - Show this help message</div>
-          <div><span className="text-cyan-300">about</span> - Learn about me</div>
-          <div><span className="text-cyan-300">skills</span> - List my technical skills</div>
-          <div><span className="text-cyan-300">projects</span> - View my projects</div>
-          <div><span className="text-cyan-300">education</span> - Show my education</div>
-          <div><span className="text-cyan-300">contact</span> - Get contact information</div>
-          <div><span className="text-cyan-300">whoami</span> - Display user info</div>
-          <div><span className="text-cyan-300">ls</span> - List directory contents</div>
-          <div><span className="text-cyan-300">pwd</span> - Print working directory</div>
-          <div><span className="text-cyan-300">clear</span> - Clear terminal screen</div>
-          <div><span className="text-cyan-300">neofetch</span> - Display system information</div>
-          <div><span className="text-cyan-300">github</span> - Open GitHub profile</div>
-          <div><span className="text-cyan-300">linkedin</span> - Open LinkedIn profile</div>
-          <div><span className="text-cyan-300">resume</span> - Download resume</div>
+        <div className="text-white font-semibold">Available commands:</div>
+        <div className="ml-2 space-y-0.5 text-gray-400 text-xs sm:text-sm">
+          <div><span className="text-gray-300">help</span> - Show this help message</div>
+          <div><span className="text-gray-300">about</span> - Learn about me</div>
+          <div><span className="text-gray-300">skills</span> - List my technical skills</div>
+          <div><span className="text-gray-300">projects</span> - View my projects</div>
+          <div><span className="text-gray-300">education</span> - Show my education</div>
+          <div><span className="text-gray-300">contact</span> - Get contact information</div>
+          <div><span className="text-gray-300">whoami</span> - Display user info</div>
+          <div><span className="text-gray-300">ls</span> - List directory contents</div>
+          <div><span className="text-gray-300">pwd</span> - Print working directory</div>
+          <div><span className="text-gray-300">clear</span> - Clear terminal screen</div>
+          <div><span className="text-gray-300">neofetch</span> - Display system information</div>
+          <div><span className="text-gray-300">github</span> - Open GitHub profile</div>
+          <div><span className="text-gray-300">linkedin</span> - Open LinkedIn profile</div>
+          <div><span className="text-gray-300">resume</span> - Download resume</div>
         </div>
       </div>
     ),
     about: () => (
       <div className="space-y-2 text-gray-300 text-xs sm:text-sm">
-        <div className="text-green-400 font-semibold">About Pranav Nigade:</div>
+        <div className="text-white font-semibold">About Pranav Nigade:</div>
         <div className="leading-relaxed">
           MCA student specializing in Full Stack Development with a strong
           interest in Cloud Computing and DevOps automation. Passionate about
@@ -57,7 +57,7 @@ export const InteractiveTerminal = () => {
     ),
     skills: () => (
       <div className="space-y-2">
-        <div className="text-green-400 font-semibold text-xs sm:text-sm">Technical Skills:</div>
+        <div className="text-white font-semibold text-xs sm:text-sm">Technical Skills:</div>
         <div className="ml-2 space-y-1 text-gray-300 text-xs sm:text-sm">
           <div><span className="text-cyan-300">Languages:</span> JavaScript, TypeScript, Python</div>
           <div><span className="text-cyan-300">Frontend:</span> React, Next.js, HTML, CSS, Tailwind</div>
@@ -69,18 +69,18 @@ export const InteractiveTerminal = () => {
     ),
     projects: () => (
       <div className="space-y-2">
-        <div className="text-green-400 font-semibold text-xs sm:text-sm">Featured Projects:</div>
+        <div className="text-white font-semibold text-xs sm:text-sm">Featured Projects:</div>
         <div className="ml-2 space-y-2 text-gray-300 text-xs sm:text-sm">
           <div>
-            <div className="text-cyan-300 font-semibold">1. Clearon</div>
+            <div className="text-gray-300 font-semibold">1. Clearon</div>
             <div className="ml-2 text-gray-400">RAG Knowledge Management Platform</div>
           </div>
           <div>
-            <div className="text-cyan-300 font-semibold">2. Drawzzl</div>
+            <div className="text-gray-300 font-semibold">2. Drawzzl</div>
             <div className="ml-2 text-gray-400">Real-time multiplayer drawing game</div>
           </div>
           <div>
-            <div className="text-cyan-300 font-semibold">3. DrawV</div>
+            <div className="text-gray-300 font-semibold">3. DrawV</div>
             <div className="ml-2 text-gray-400">Tournament Management Platform</div>
           </div>
         </div>
@@ -89,14 +89,14 @@ export const InteractiveTerminal = () => {
     ),
     education: () => (
       <div className="space-y-2">
-        <div className="text-green-400 font-semibold text-xs sm:text-sm">Education:</div>
+        <div className="text-white font-semibold text-xs sm:text-sm">Education:</div>
         <div className="ml-2 space-y-2 text-gray-300 text-xs sm:text-sm">
           <div>
-            <div className="text-cyan-300 font-semibold">MCA (2024-2026)</div>
+            <div className="text-gray-300 font-semibold">MCA (2024-2026)</div>
             <div className="ml-2 text-gray-400">MIT World Peace University, Pune</div>
           </div>
           <div>
-            <div className="text-cyan-300 font-semibold">BCA (2021-2024)</div>
+            <div className="text-gray-300 font-semibold">BCA (2021-2024)</div>
             <div className="ml-2 text-gray-400">MIT WPU, Pune • CGPA: 8.93</div>
           </div>
         </div>
@@ -104,7 +104,7 @@ export const InteractiveTerminal = () => {
     ),
     contact: () => (
       <div className="space-y-2">
-        <div className="text-green-400 font-semibold text-xs sm:text-sm">Contact Information:</div>
+        <div className="text-white font-semibold text-xs sm:text-sm">Contact Information:</div>
         <div className="ml-2 space-y-1 text-gray-300 text-xs sm:text-sm">
           <div className="break-all"><span className="text-cyan-300">Email:</span> pranavv.nigade@gmail.com</div>
           <div className="break-all"><span className="text-cyan-300">GitHub:</span> github.com/pranavnigade123</div>
@@ -271,8 +271,8 @@ export const InteractiveTerminal = () => {
               display: isMinimized ? "none" : "flex"
             }}
           >
-            <div className="flex h-full w-full flex-col overflow-hidden rounded-lg sm:rounded-xl border border-green-500/30 bg-gray-900/98 shadow-2xl shadow-green-500/20 backdrop-blur-xl">
-              <div className="flex items-center justify-between border-b border-green-500/30 bg-gray-900/90 px-3 py-2 sm:px-4 sm:py-3 shrink-0">
+            <div className="flex h-full w-full flex-col overflow-hidden rounded-lg sm:rounded-xl border border-green-500/30 bg-[#1a1a1a] shadow-2xl shadow-green-500/20 backdrop-blur-xl">
+              <div className="flex items-center justify-between border-b border-green-500/30 bg-[#1a1a1a] px-3 py-2 sm:px-4 sm:py-3 shrink-0">
                 <div className="flex items-center gap-2 min-w-0">
                   <div className="flex gap-1.5 shrink-0">
                     <button
@@ -325,7 +325,7 @@ export const InteractiveTerminal = () => {
                 }}
               >
                 <div className="mb-3 sm:mb-4 space-y-1 text-gray-300">
-                  <div className="text-green-400 font-semibold">Welcome to Pranav's Interactive Terminal!</div>
+                  <div className="text-white font-semibold">Welcome to Pranav's Interactive Terminal!</div>
                   <div className="text-gray-400 text-xs">Type 'help' to see available commands or click a button below.</div>
                 </div>
 
@@ -378,3 +378,5 @@ export const InteractiveTerminal = () => {
     </>
   );
 };
+
+

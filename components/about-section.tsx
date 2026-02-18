@@ -195,9 +195,9 @@ export const AboutSection = () => {
                             initial={{ opacity: 0, x: 50 }}
                             animate={isInView ? { opacity: 1, x: 0 } : {}}
                             transition={{ duration: 0.8 }}
-                            className="rounded-lg border border-green-500/30 bg-slate-900/80 shadow-xl shadow-green-500/10"
+                            className="rounded-lg border border-green-500/30 bg-[#1a1a1a] shadow-xl shadow-green-500/10"
                         >
-                            <div className="flex items-center gap-2 border-b border-green-500/30 bg-slate-900/50 px-4 py-3">
+                            <div className="flex items-center gap-2 border-b border-green-500/30 bg-[#1a1a1a] px-4 py-3">
                                 <div className="flex gap-1.5">
                                     <div className="h-3 w-3 rounded-full bg-red-500/80" />
                                     <div className="h-3 w-3 rounded-full bg-yellow-500/80" />
@@ -250,7 +250,7 @@ export const AboutSection = () => {
                                     initial={{ opacity: 0, x: -20 }}
                                     animate={isInView ? { opacity: 1, x: 0 } : {}}
                                     transition={{ delay: 0.4 + idx * 0.1, duration: 0.5 }}
-                                    className="group flex gap-4 rounded-lg border border-green-500/20 bg-slate-900/40 p-4 backdrop-blur transition-all hover:border-green-500/40 hover:bg-slate-900/60"
+                                    className="group flex gap-4 rounded-lg border border-green-500/20 bg-[#1a1a1a]/80 p-4 backdrop-blur transition-all hover:border-green-500/40 hover:bg-[#1a1a1a]"
                                 >
                                     <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-green-500/20 to-emerald-500/10 text-green-400">
                                         <Icon className="h-6 w-6" />
@@ -283,7 +283,7 @@ export const AboutSection = () => {
                                         initial={{ opacity: 0, scale: 0.95 }}
                                         animate={isInView ? { opacity: 1, scale: 1 } : {}}
                                         transition={{ delay: 0.7 + idx * 0.1, duration: 0.5 }}
-                                        className="group relative overflow-hidden rounded-lg border border-green-500/20 bg-slate-900/40 backdrop-blur transition-all hover:border-green-500/40 hover:bg-slate-900/60"
+                                        className="group relative overflow-hidden rounded-lg border border-green-500/20 bg-[#1a1a1a]/80 backdrop-blur transition-all hover:border-green-500/40 hover:bg-[#1a1a1a]"
                                     >
                                         {/* Gradient overlay on hover */}
                                         <div className={`absolute inset-0 bg-gradient-to-br ${cert.color} opacity-0 transition-opacity duration-300 group-hover:opacity-10`} />
@@ -351,9 +351,9 @@ export const AboutSection = () => {
                     </h3>
 
                     {/* Terminal-style Skills Display */}
-                    <div className="mx-auto max-w-5xl rounded-xl border border-green-500/30 bg-slate-900/80 shadow-2xl shadow-green-500/10">
+                    <div className="mx-auto max-w-5xl rounded-xl border border-green-500/30 bg-[#1a1a1a] shadow-2xl shadow-green-500/10">
                         {/* Terminal Header */}
-                        <div className="flex items-center justify-between border-b border-green-500/30 bg-slate-900/50 px-4 py-3">
+                        <div className="flex items-center justify-between border-b border-green-500/30 bg-[#1a1a1a] px-4 py-3">
                             <div className="flex items-center gap-2">
                                 <div className="flex gap-1.5">
                                     <div className="h-3 w-3 rounded-full bg-red-500/80" />
@@ -409,7 +409,7 @@ export const AboutSection = () => {
                         </div>
 
                         {/* Terminal Footer */}
-                        <div className="border-t border-green-500/30 bg-slate-900/50 px-4 py-3">
+                        <div className="border-t border-green-500/30 bg-[#1a1a1a] px-4 py-3">
                             <p className="font-mono text-xs text-gray-500">
                                 <span className="text-green-400">$</span> echo "Total: {skills.reduce((acc, s) => acc + s.items.length, 0)} technologies mastered"
                                 <br />
@@ -448,9 +448,9 @@ export const AboutSection = () => {
                         </button>
 
                         {/* Certificate container */}
-                        <div className="overflow-hidden rounded-xl border border-green-500/30 bg-slate-900/95 shadow-2xl shadow-green-500/20">
+                        <div className="overflow-hidden rounded-xl border border-green-500/30 bg-[#1a1a1a] shadow-2xl shadow-green-500/20">
                             {/* Header */}
-                            <div className="flex items-center justify-between border-b border-green-500/30 bg-slate-900/50 px-4 py-3">
+                            <div className="flex items-center justify-between border-b border-green-500/30 bg-[#1a1a1a] px-4 py-3">
                                 <div className="flex items-center gap-2">
                                     <div className="flex gap-1.5">
                                         <div className="h-3 w-3 rounded-full bg-red-500/80" />
@@ -485,6 +485,11 @@ export const AboutSection = () => {
         </section>
     );
 };
+
+
+
+
+
 
 
 
