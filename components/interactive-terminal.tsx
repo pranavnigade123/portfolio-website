@@ -48,7 +48,7 @@ export const InteractiveTerminal = () => {
         <div className="leading-relaxed">
           MCA student specializing in Full Stack Development with a strong
           interest in Cloud Computing and DevOps automation. Passionate about
-          building scalable web applications and exploring cloud native architectures.
+          building scalable web applications and exploring cloud-native architectures.
         </div>
       </div>
     ),

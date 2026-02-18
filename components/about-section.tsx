@@ -211,20 +211,19 @@ export const AboutSection = () => {
                                     <span className="text-yellow-300">&quot;Hello, World!&quot;</span>
                                 </p>
                                 <p className="mb-4">
-                                    I&apos;m Rakesh Yadav, an aspiring B.Tech AI & Data Science professional with a passion for
-                                    building innovative solutions. My journey spans from crafting responsive web applications to
-                                    implementing machine learning models and deploying cloud infrastructure.
+                                    I&apos;m Pranav Nigade, an MCA student specializing in Full Stack Development with a strong interest in
+                                    Cloud Computing and DevOps automation. I&apos;m passionate about building scalable web applications, improving
+                                    deployment workflows, and exploring cloud-native architectures.
                                 </p>
                                 <p className="mb-4">
-                                    With strong expertise in full-stack development using MERN/PERN stack, I&apos;ve built production-ready
-                                    applications including a sponsored sports event platform with 1000+ users and a real-time quiz system.
-                                    I combine my knowledge of AI/ML with modern web technologies to create intelligent, scalable solutions.
+                                    With expertise in modern web technologies including React, Next.js, FastAPI, and Node.js, I&apos;ve built
+                                    production-grade applications like Clearon (a RAG Knowledge Management Platform) and Drawzzl (a Real-time
+                                    Multiplayer Drawing Game). I focus on creating scalable, performant solutions with clean architecture.
                                 </p>
                                 <p className="mb-4">
-                                    Previously served as Cloud & Open Source Lead at Google Developers Group on Campus and Technical Head
-                                    at AISA during my 3rd year. My experience includes working with Docker, AWS EC2, PostgreSQL, MongoDB,
-                                    and building RESTful APIs. Currently in my final year, focused on expanding my expertise in cloud
-                                    technologies and machine learning.
+                                    My experience spans full-stack development, cloud deployment on Azure and AWS, containerization with Docker,
+                                    and implementing CI/CD pipelines. I&apos;ve optimized applications, achieving 97% performance improvements, and
+                                    deployed microservices with 99.9% uptime. I&apos;m currently pursuing my MCA at MIT World Peace University.
                                 </p>
                                 <p>
                                     <span className="text-green-400">$</span> <span className="text-green-300">cat</span>{" "}
