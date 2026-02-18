@@ -17,8 +17,11 @@ export const InteractiveTerminal = () => {
   const [history, setHistory] = useState<Command[]>([]);
   const [commandHistory, setCommandHistory] = useState<string[]>([]);
   const [historyIndex, setHistoryIndex] = useState(-1);
+  const [showQuickCommands, setShowQuickCommands] = useState(true);
   const inputRef = useRef<HTMLInputElement>(null);
   const terminalRef = useRef<HTMLDivElement>(null);
+
+  const quickCommands = ["help", "about", "skills", "projects", "contact", "neofetch"];
 
   const commands: Record<string, () => string | React.ReactElement> = {
     help: () => (
@@ -160,9 +163,11 @@ export const InteractiveTerminal = () => {
 
     setCommandHistory((prev) => [...prev, cmd]);
     setHistoryIndex(-1);
+    setShowQuickCommands(false); // Hide quick commands after first command
 
     if (trimmedCmd === "clear") {
       setHistory([]);
+      setShowQuickCommands(true); // Show quick commands again after clear
       return;
     }
 
@@ -321,8 +326,26 @@ export const InteractiveTerminal = () => {
               >
                 <div className="mb-3 sm:mb-4 space-y-1 text-gray-300">
                   <div className="text-green-400 font-semibold">Welcome to Pranav's Interactive Terminal!</div>
-                  <div className="text-gray-400 text-xs">Type 'help' to see available commands.</div>
+                  <div className="text-gray-400 text-xs">Type 'help' to see available commands or click a button below.</div>
                 </div>
+
+                {/* Quick Command Buttons */}
+                {showQuickCommands && (
+                  <div className="mb-4 flex flex-wrap gap-2">
+                    {quickCommands.map((cmd) => (
+                      <button
+                        key={cmd}
+                        onClick={() => {
+                          handleCommand(cmd);
+                          setInput("");
+                        }}
+                        className="rounded-md border border-green-500/30 bg-green-500/10 px-3 py-1.5 text-xs font-mono text-green-400 transition-all hover:border-green-500/50 hover:bg-green-500/20 active:scale-95"
+                      >
+                        {cmd}
+                      </button>
+                    ))}
+                  </div>
+                )}
 
                 {history.map((cmd, idx) => (
                   <div key={idx} className="mb-2 sm:mb-3">
