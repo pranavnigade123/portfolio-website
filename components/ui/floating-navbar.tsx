@@ -36,18 +36,17 @@ export const FloatingNav = ({
   useEffect(() => {
     const handleScroll = () => {
       const sections = ["home", "about", "projects", "contact"];
-      const scrollPosition = window.scrollY + 200;
+      const scrollPosition = window.scrollY + window.innerHeight / 2;
 
-      for (const section of sections) {
+      // Check from bottom to top to prioritize lower sections
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const section = sections[i];
         const element = document.getElementById(
           section === "home" ? "hero" : section
         );
         if (element) {
-          const { offsetTop, offsetHeight } = element;
-          if (
-            scrollPosition >= offsetTop &&
-            scrollPosition < offsetTop + offsetHeight
-          ) {
+          const { offsetTop } = element;
+          if (scrollPosition >= offsetTop) {
             setActiveSection(section);
             break;
           }
@@ -55,9 +54,21 @@ export const FloatingNav = ({
       }
     };
 
-    window.addEventListener("scroll", handleScroll);
+    // Throttle scroll events for better performance
+    let ticking = false;
+    const throttledScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          handleScroll();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+
+    window.addEventListener("scroll", throttledScroll, { passive: true });
     handleScroll();
-    return () => window.removeEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", throttledScroll);
   }, []);
 
   const navItems = [
