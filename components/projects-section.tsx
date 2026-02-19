@@ -49,7 +49,7 @@ const projects = [
         github: "https://github.com/pranavnigade123/drawzzl-frontend",
         demo: "https://drawzzl-frontend-two.vercel.app/",
         status: "Production",
-        year: "2024",
+        year: "2025-2026",
         metrics: { uptime: "99.9%", latency: "<100ms", users: "8+" },
         highlights: ["Real-time Multiplayer", "Auto-scaling", "JWT Authentication"],
     },

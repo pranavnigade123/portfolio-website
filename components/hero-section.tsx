@@ -1,29 +1,35 @@
 "use client";
 
-import React, { useRef, useState } from "react";
-import { Canvas, useFrame } from "@react-three/fiber";
-import { Points, PointMaterial } from "@react-three/drei";
-import * as random from "maath/random/dist/maath-random.esm";
+import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { Terminal, Cloud, Server, Code2, Database, GitBranch } from "lucide-react";
+import { Terminal, Cloud, Server, Code2, GitBranch } from "lucide-react";
 import { Spotlight } from "@/components/ui/spotlight";
+import { Canvas } from "@react-three/fiber";
+import { Points, PointMaterial } from "@react-three/drei";
+import * as random from "maath/random/dist/maath-random.esm";
 import type { Points as ThreePoints } from "three";
 
 type StarBackgroundProps = React.ComponentProps<typeof Points>;
 
 function StarBackground(props: StarBackgroundProps) {
-  const ref = useRef<ThreePoints | null>(null);
-  const [sphere] = useState(() =>
+  const ref = React.useRef<ThreePoints | null>(null);
+  const [sphere] = React.useState(() =>
     random.inSphere(new Float32Array(6000), { radius: 1.2 })
   );
 
-  useFrame((state, delta) => {
-    if (ref.current) {
-      ref.current.rotation.x -= delta / 10;
-      ref.current.rotation.y -= delta / 15;
-    }
-  });
+  React.useEffect(() => {
+    let animationId: number;
+    const animate = () => {
+      if (ref.current) {
+        ref.current.rotation.x -= 0.001;
+        ref.current.rotation.y -= 0.00067;
+      }
+      animationId = requestAnimationFrame(animate);
+    };
+    animate();
+    return () => cancelAnimationFrame(animationId);
+  }, []);
 
   return (
     <group rotation={[0, 0, Math.PI / 4]}>
