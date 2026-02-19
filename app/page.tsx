@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import { HeroSection } from "@/components/hero-section";
 import { AboutSection } from "@/components/about-section";
 import { ProjectsSection } from "@/components/projects-section";
@@ -8,6 +11,8 @@ import { InteractiveTerminal } from "@/components/interactive-terminal";
 import { BootSequence } from "@/components/boot-sequence";
 
 export default function Home() {
+  const [isTerminalOpen, setIsTerminalOpen] = useState(false);
+
   return (
     <main className="relative bg-black min-h-screen flex flex-col items-center justify-between overflow-x-hidden">
       <BootSequence />
@@ -17,8 +22,11 @@ export default function Home() {
       <ContactSection />
       <Footer />
 
-      <FloatingNav />
-      <InteractiveTerminal />
+      <FloatingNav onTerminalClick={() => setIsTerminalOpen(true)} />
+      <InteractiveTerminal 
+        isOpen={isTerminalOpen} 
+        onClose={() => setIsTerminalOpen(false)} 
+      />
     </main>
   );
 }

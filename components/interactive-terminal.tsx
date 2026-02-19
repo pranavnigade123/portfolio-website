@@ -9,8 +9,12 @@ interface Command {
   output: string | React.ReactElement;
 }
 
-export const InteractiveTerminal = () => {
-  const [isOpen, setIsOpen] = useState(false);
+interface InteractiveTerminalProps {
+  isOpen: boolean;
+  onClose: () => void;
+}
+
+export const InteractiveTerminal = ({ isOpen, onClose }: InteractiveTerminalProps) => {
   const [isMinimized, setIsMinimized] = useState(false);
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [input, setInput] = useState("");
@@ -237,18 +241,6 @@ export const InteractiveTerminal = () => {
 
   return (
     <>
-      {!isOpen && (
-        <motion.button
-          initial={{ scale: 0 }}
-          animate={{ scale: 1 }}
-          transition={{ delay: 1, type: "spring", stiffness: 260, damping: 20 }}
-          onClick={() => setIsOpen(true)}
-          className="fixed bottom-6 right-6 z-50 flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-full bg-gradient-to-r from-green-500 to-emerald-600 text-black shadow-lg shadow-green-500/50 transition-all hover:scale-110 hover:shadow-green-500/70"
-          aria-label="Open Terminal"
-        >
-          <Terminal className="h-5 w-5 sm:h-6 sm:w-6" />
-        </motion.button>
-      )}
 
       <AnimatePresence>
         {isOpen && (
@@ -276,7 +268,7 @@ export const InteractiveTerminal = () => {
                 <div className="flex items-center gap-2 min-w-0">
                   <div className="flex gap-1.5 shrink-0">
                     <button
-                      onClick={() => setIsOpen(false)}
+                      onClick={onClose}
                       className="h-2.5 w-2.5 sm:h-3 sm:w-3 rounded-full bg-red-500/80 transition-colors hover:bg-red-500"
                       aria-label="Close"
                     />
@@ -304,7 +296,7 @@ export const InteractiveTerminal = () => {
                     {isFullscreen ? <Minimize2 className="h-3 w-3 sm:h-4 sm:w-4" /> : <Maximize2 className="h-3 w-3 sm:h-4 sm:w-4" />}
                   </button>
                   <button
-                    onClick={() => setIsOpen(false)}
+                    onClick={onClose}
                     className="text-gray-400 transition-colors hover:text-red-400 p-1"
                     aria-label="Close Terminal"
                   >

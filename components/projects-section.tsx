@@ -64,7 +64,7 @@ const projects = [
         gradient: "from-blue-500 via-green-500 to-teal-500",
         github: "https://github.com/pranavnigade123/clearon",
         demo: "https://github.com/pranavnigade123/clearon",
-        status: "Production",
+        status: "Ongoing",
         year: "2024-2026",
         metrics: { performance: "97%↑", memory: "75%↓", startup: "85%↓" },
         highlights: ["RAG Platform", "Vector Search", "Azure OpenAI Integration"],
@@ -167,7 +167,12 @@ function ProjectCard({ project, index }: { project: typeof projects[0]; index: n
                         <span className="rounded-full bg-slate-800/50 px-2 py-0.5 font-mono text-xs text-gray-400">
                             {project.year}
                         </span>
-                        <span className={`rounded-full px-2 py-0.5 text-xs font-semibold ${project.status === "Production" ? "bg-green-500/20 text-green-400" : "bg-yellow-500/20 text-yellow-400"
+                        <span className={`rounded-full px-2 py-0.5 text-xs font-semibold ${
+                            project.status === "Production" 
+                                ? "bg-green-500/20 text-green-400" 
+                                : project.status === "Ongoing"
+                                ? "bg-yellow-500/20 text-yellow-400"
+                                : "bg-blue-500/20 text-blue-400"
                             }`}>
                             {project.status}
                         </span>

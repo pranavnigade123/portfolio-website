@@ -9,10 +9,16 @@ import {
   useTransform,
 } from "framer-motion";
 import { cn } from "@/lib/utils";
-import { Home, User, Briefcase, Mail } from "lucide-react";
+import { Home, User, Briefcase, Mail, Terminal } from "lucide-react";
 import Link from "next/link";
 
-export const FloatingNav = ({ className }: { className?: string }) => {
+export const FloatingNav = ({ 
+  className,
+  onTerminalClick 
+}: { 
+  className?: string;
+  onTerminalClick?: () => void;
+}) => {
   const [activeSection, setActiveSection] = useState("home");
   const [isMobile, setIsMobile] = useState(false);
 
@@ -147,6 +153,30 @@ export const FloatingNav = ({ className }: { className?: string }) => {
         tooltipBorder: "border-green-500/30",
       },
     },
+    {
+      name: "Terminal",
+      link: "#",
+      icon: <Terminal className="h-4 w-4 sm:h-5 sm:w-5" />,
+      command: "./terminal",
+      id: "terminal",
+      isTerminal: true,
+      colors: {
+        bg: "bg-emerald-500/15",
+        border: "border-emerald-400/40",
+        shadow: "shadow-[0_0_20px_rgba(16,185,129,0.3)]",
+        hoverBorder: "hover:border-emerald-400/30",
+        hoverShadow: "hover:shadow-[0_0_15px_rgba(16,185,129,0.2)]",
+        text: "text-emerald-400",
+        hoverText: "text-emerald-300",
+        glow: "bg-emerald-500/20",
+        glowHover: "bg-emerald-400/10",
+        indicator: "bg-emerald-400",
+        indicatorShadow: "shadow-[0_0_10px_rgba(16,185,129,0.8)]",
+        tooltipText: "text-emerald-300",
+        tooltipPrompt: "text-emerald-500/60",
+        tooltipBorder: "border-emerald-500/30",
+      },
+    },
   ];
 
   const mouseX = useMotionValue(Infinity);
@@ -188,6 +218,7 @@ export const FloatingNav = ({ className }: { className?: string }) => {
             key={idx}
             isActive={activeSection === navItem.id}
             isMobile={isMobile}
+            onTerminalClick={navItem.isTerminal ? onTerminalClick : undefined}
             {...navItem}
           />
         ))}
@@ -204,6 +235,8 @@ function IconContainer({
   isActive,
   isMobile,
   colors,
+  isTerminal,
+  onTerminalClick,
 }: {
   mouseX: ReturnType<typeof useMotionValue<number>>;
   icon: React.ReactNode;
@@ -211,6 +244,8 @@ function IconContainer({
   command: string;
   isActive: boolean;
   isMobile?: boolean;
+  isTerminal?: boolean;
+  onTerminalClick?: () => void;
   colors: {
     bg: string;
     border: string;
@@ -251,20 +286,28 @@ function IconContainer({
 
   const [hovered, setHovered] = useState(false);
 
-  return (
-    <Link href={link}>
+  const handleClick = (e: React.MouseEvent) => {
+    if (isTerminal && onTerminalClick) {
+      e.preventDefault();
+      onTerminalClick();
+    }
+  };
+
+  const content = (
       <motion.div
         ref={ref}
         style={isMobile ? {} : { width, height }}
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
         whileTap={{ scale: 0.95 }}
+        onClick={handleClick}
         className={cn(
           "aspect-square rounded-full flex items-center justify-center relative transition-all duration-300 border",
           isMobile ? "w-11 h-11 sm:w-12 sm:h-12" : "",
           isActive
             ? `${colors.bg} ${colors.border} ${colors.shadow}`
-            : `bg-white/5 border-white/10 hover:bg-white/10 ${colors.hoverBorder} ${colors.hoverShadow}`
+            : `bg-white/5 border-white/10 hover:bg-white/10 ${colors.hoverBorder} ${colors.hoverShadow}`,
+          isTerminal ? "cursor-pointer" : ""
         )}
       >
         <AnimatePresence>
@@ -337,7 +380,12 @@ function IconContainer({
           />
         )}
       </motion.div>
-    </Link>
+  );
+
+  return isTerminal ? (
+    <div>{content}</div>
+  ) : (
+    <Link href={link}>{content}</Link>
   );
 }
 
