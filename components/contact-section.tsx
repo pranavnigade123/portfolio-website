@@ -114,7 +114,7 @@ export const ContactSection = () => {
                                     </label>
                                     <input
                                         type="text"
-                                        name="user_name"
+                                        name="name"
                                         value={formData.name}
                                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                                         placeholder="John Doe"
@@ -132,7 +132,7 @@ export const ContactSection = () => {
                                     </label>
                                     <input
                                         type="email"
-                                        name="user_email"
+                                        name="email"
                                         value={formData.email}
                                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                                         placeholder="john@example.com"
