@@ -3,7 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { Terminal, Cloud, Server, Code2, GitBranch } from "lucide-react";
+import { Terminal, Cloud, Server, Code2, Database, Github } from "lucide-react";
 import { Spotlight } from "@/components/ui/spotlight";
 import { Canvas } from "@react-three/fiber";
 import { Points, PointMaterial } from "@react-three/drei";
@@ -62,11 +62,15 @@ const terminalCommands = [
 ];
 
 const techStack = [
-  { icon: Terminal, label: "Linux", color: "text-green-400" },
-  { icon: Cloud, label: "Cloud", color: "text-sky-400" },
-  { icon: Server, label: "DevOps", color: "text-blue-400" },
-  { icon: Code2, label: "Scripting", color: "text-green-500" },
-  { icon: GitBranch, label: "Git", color: "text-teal-400" },
+  { icon: Code2, label: "Next.js", color: "text-white" },
+  { icon: Server, label: "Node.js", color: "text-green-400" },
+  { icon: Database, label: "PostgreSQL", color: "text-blue-400" },
+  { icon: Cloud, label: "AWS", color: "text-orange-400" },
+  { icon: Cloud, label: "Azure", color: "text-sky-400" },
+  { icon: Terminal, label: "Docker", color: "text-cyan-400" },
+  { icon: Code2, label: "Tailwind", color: "text-teal-400" },
+  { icon: Github, label: "GitHub", color: "text-purple-400" },
+  { icon: Terminal, label: "Linux", color: "text-green-500" },
 ];
 
 export const HeroSection = () => {
@@ -144,7 +148,7 @@ export const HeroSection = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.5, duration: 0.6 }}
-              className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-3"
+              className="mt-6 grid grid-cols-3 gap-3 sm:grid-cols-3"
             >
               {techStack.map(({ icon: Icon, label, color }) => (
                 <div
