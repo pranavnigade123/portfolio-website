@@ -215,16 +215,7 @@ export const AboutSection = () => {
                                     Cloud Computing and DevOps automation. I&apos;m passionate about building scalable web applications, improving
                                     deployment workflows, and exploring cloud-native architectures.
                                 </p>
-                                <p className="mb-4">
-                                    With expertise in modern web technologies including React, Next.js, FastAPI, and Node.js, I&apos;ve built
-                                    production-grade applications like Clearon (a RAG Knowledge Management Platform) and Drawzzl (a Real-time
-                                    Multiplayer Drawing Game). I focus on creating scalable, performant solutions with clean architecture.
-                                </p>
-                                <p className="mb-4">
-                                    My experience spans full-stack development, cloud deployment on Azure and AWS, containerization with Docker,
-                                    and implementing CI/CD pipelines. I&apos;ve optimized applications, achieving 97% performance improvements, and
-                                    deployed microservices with 99.9% uptime. I&apos;m currently pursuing my MCA at MIT World Peace University.
-                                </p>
+                               
                                 <p>
                                     <span className="text-green-400">$</span> <span className="text-green-300">cat</span>{" "}
                                     <span className="text-yellow-300">motto.txt</span>
