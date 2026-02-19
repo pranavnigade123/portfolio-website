@@ -202,11 +202,13 @@ export const HeroSection = () => {
               className="flex flex-col gap-4 sm:flex-row sm:items-center"
             >
               <Link
-                href="#projects"
+                href="/Pranav-Nigade-Resume.pdf"
+                target="_blank"
+                download
                 className="group inline-flex items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-green-500 to-emerald-600 px-8 py-3 font-mono text-sm font-semibold text-black shadow-lg shadow-green-500/30 transition-all hover:shadow-green-500/50"
               >
                 <Terminal className="h-4 w-4" />
-                View Projects
+                Download Resume
                 <span className="transition-transform group-hover:translate-x-1">→</span>
               </Link>
               <Link

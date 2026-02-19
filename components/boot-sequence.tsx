@@ -24,6 +24,7 @@ export const BootSequence = () => {
   const [isBooting, setIsBooting] = useState(true);
   const [visibleMessages, setVisibleMessages] = useState<number[]>([]);
   const [showWelcome, setShowWelcome] = useState(false);
+  const [canSkip, setCanSkip] = useState(false);
 
   useEffect(() => {
     // Check if user has seen boot sequence before
@@ -44,14 +45,38 @@ export const BootSequence = () => {
     // Show welcome message
     setTimeout(() => {
       setShowWelcome(true);
+      setCanSkip(true); // Allow skipping after welcome message appears
     }, 3200);
+  }, []);
 
-    // End boot sequence
-    setTimeout(() => {
+  useEffect(() => {
+    if (!canSkip) return;
+
+    const handleSkip = () => {
       setIsBooting(false);
       sessionStorage.setItem("hasSeenBoot", "true");
-    }, 4000);
-  }, []);
+    };
+
+    // Handle keyboard
+    const handleKeyPress = (e: KeyboardEvent) => {
+      handleSkip();
+    };
+
+    // Handle touch/click
+    const handleClick = () => {
+      handleSkip();
+    };
+
+    window.addEventListener("keydown", handleKeyPress);
+    window.addEventListener("click", handleClick);
+    window.addEventListener("touchstart", handleClick);
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyPress);
+      window.removeEventListener("click", handleClick);
+      window.removeEventListener("touchstart", handleClick);
+    };
+  }, [canSkip]);
 
   if (!isBooting) return null;
 
@@ -159,7 +184,8 @@ export const BootSequence = () => {
                   className="space-y-2"
                 >
                   <p className="font-mono text-sm text-gray-400">
-                    System ready. Press any key to continue...
+                    <span className="hidden sm:inline">System ready. Press any key to continue...</span>
+                    <span className="sm:hidden">System ready. Tap anywhere to continue...</span>
                   </p>
                   <motion.div
                     animate={{ opacity: [0.5, 1, 0.5] }}
