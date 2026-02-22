@@ -14,7 +14,7 @@ export default function Home() {
   const [isTerminalOpen, setIsTerminalOpen] = useState(false);
 
   return (
-    <main className="relative min-h-screen flex flex-col items-center justify-between overflow-x-hidden">
+    <main className="relative min-h-screen flex flex-col items-center justify-between overflow-x-hidden bg-black">
       {/* Global gradient background */}
       <div className="fixed inset-0 -z-10 bg-gradient-to-b from-black via-slate-950 via-30% to-black" />
       
