@@ -14,7 +14,13 @@ export default function Home() {
   const [isTerminalOpen, setIsTerminalOpen] = useState(false);
 
   return (
-    <main className="relative bg-black min-h-screen flex flex-col items-center justify-between overflow-x-hidden">
+    <main className="relative min-h-screen flex flex-col items-center justify-between overflow-x-hidden">
+      {/* Global gradient background */}
+      <div className="fixed inset-0 -z-10 bg-gradient-to-b from-black via-slate-950 via-30% to-black" />
+      
+      {/* Global grid pattern */}
+      <div className="pointer-events-none fixed inset-0 -z-10 bg-[linear-gradient(to_right,#0f172a_1px,transparent_1px),linear-gradient(to_bottom,#0f172a_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-20" />
+      
       <BootSequence />
       <HeroSection />
       <AboutSection />

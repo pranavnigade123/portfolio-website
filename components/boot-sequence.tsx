@@ -219,12 +219,7 @@ export const BootSequence = () => {
           </motion.div>
 
           {/* Scanline Effect */}
-          <motion.div
-            animate={{ y: ["-100%", "100%"] }}
-            transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
-            className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-green-500/5 to-transparent"
-            style={{ height: "100px" }}
-          />
+          {/* Removed for cleaner look */}
         </div>
 
         {/* CRT Screen Effect */}

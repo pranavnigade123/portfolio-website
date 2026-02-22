@@ -55,11 +55,8 @@ export const ContactSection = () => {
         <section
             id="contact"
             ref={ref}
-            className="relative min-h-screen w-full overflow-hidden bg-gradient-to-b from-black via-slate-950 to-black py-20 md:py-32"
+            className="relative min-h-screen w-full overflow-hidden py-20 md:py-32"
         >
-            {/* Grid background */}
-            <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,#0f172a_1px,transparent_1px),linear-gradient(to_bottom,#0f172a_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-30" />
-
             <div className="relative z-10 mx-auto w-full max-w-7xl px-6 md:px-10">
                 {/* Section Header */}
                 <motion.div

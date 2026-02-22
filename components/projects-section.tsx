@@ -295,24 +295,8 @@ export const ProjectsSection = () => {
         <section
             id="projects"
             ref={ref}
-            className="relative min-h-screen w-full overflow-hidden bg-black py-20 md:py-32"
+            className="relative min-h-screen w-full overflow-hidden py-20 md:py-32"
         >
-            {/* Animated grid background */}
-            <div className="pointer-events-none absolute inset-0">
-                <div className="absolute inset-0 bg-[linear-gradient(to_right,#0f172a_1px,transparent_1px),linear-gradient(to_bottom,#0f172a_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-30" />
-                <motion.div
-                    animate={{
-                        backgroundPosition: ["0% 0%", "100% 100%"],
-                    }}
-                    transition={{
-                        duration: 20,
-                        repeat: Infinity,
-                        repeatType: "reverse",
-                    }}
-                    className="absolute inset-0 bg-gradient-to-br from-green-500/5 via-transparent to-green-500/5"
-                />
-            </div>
-
             <div className="relative z-10 mx-auto w-full max-w-7xl px-6 md:px-10">
                 {/* Section Header */}
                 <motion.div
