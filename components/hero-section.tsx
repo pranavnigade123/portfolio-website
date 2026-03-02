@@ -176,9 +176,9 @@ export const HeroSection = () => {
               transition={{ delay: 0.3, duration: 0.7 }}
               className="pt-0 mt-0 mb-6 font-mono text-5xl font-bold leading-tight text-white sm:text-5xl md:text-6xl lg:text-7xl"
             >
-              <span className="text-green-400">$</span>Full Stack{" "}
+              <span className="text-green-400">$</span>
               <span className="bg-gradient-to-r from-green-400 via-sky-400 to-blue-400 bg-clip-text text-transparent">
-                Developer
+                Pranav Nigade
               </span>
             </motion.h1>
 
